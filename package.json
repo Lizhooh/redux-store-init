@@ -1,0 +1,17 @@
+{
+  "name": "redux-store-init",
+  "version": "1.0.0",
+  "description": "redux-store-init is a function used to initialize store.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lizhooh/redux-store-init"
+  },
+  "author": "lizhooh",
+  "license": "MIT",
+  "keywords": [
+    "redux-store",
+    "redux-store-init",
+    "redux-init"
+  ]
+}
