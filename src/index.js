@@ -5,11 +5,12 @@ import {
     applyMiddleware,
 } from 'redux';
 import thunk from 'redux-thunk';
+import isEnv from 'is-env';
 
-const hasReduxTool = !!window.__REDUX_DEVTOOLS_EXTENSION__;
+const hasReduxTool = isEnv('browser') && !!window.__REDUX_DEVTOOLS_EXTENSION__;
 
 const devtool = (open) => (
-    open && window.__REDUX_DEVTOOLS_EXTENSION__()
+    open && isEnv('browser') && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 const middleware = (open) => {
