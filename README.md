@@ -13,9 +13,12 @@ npm install --save redux-store-init
 ### use
 
 ```js
+import React from 'react';
+import { hydrate } from 'react-dom';
 import { Provider } = require('react-redux');
-import Store from 'redux-store-init';
 import * as reducers from './reducers';
+import Store from 'redux-store-init';
+
 const store = Store({ reducers, devtool: true });
 
 hydrate(
