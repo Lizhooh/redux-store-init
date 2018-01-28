@@ -28,3 +28,10 @@ hydrate(
     document.getElementById('app')
 );
 ```
+
+### options
+
+- devtool: Boolean
+- reducers: Function
+- compose: Array
+

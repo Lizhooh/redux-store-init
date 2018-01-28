@@ -15,8 +15,8 @@ const devtool = (open) => (
 
 const middleware = (open) => {
     return open && hasReduxTool ?
-        compose(applyMiddleware(thunk), devtool(true)) :
-        applyMiddleware(thunk);
+        [applyMiddleware(thunk), devtool(true)] :
+        [applyMiddleware(thunk)];
 };
 
 export default (options) => {
@@ -24,6 +24,7 @@ export default (options) => {
     options = {
         devtool: true,
         reducers: {},
+        compose: [],
         ...options,
     };
 
@@ -31,6 +32,6 @@ export default (options) => {
         combineReducers({
             ...options.reducers,
         }),
-        middleware(options.devtool),
+        compose(...middleware(options.devtool), ...compose),
     );
 }
