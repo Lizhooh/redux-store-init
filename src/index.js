@@ -12,7 +12,7 @@ const devtool = (open) => (
     open && isEnv('browser') && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-export default (options) => {
+export default (options, applyMiddlewares = []) => {
 
     options = {
         devtool: true,
@@ -22,7 +22,7 @@ export default (options) => {
         ...options,
     };
 
-    const _middleware = [...options.applyMiddlewares];
+    const _middleware = [...options.applyMiddlewares, ...applyMiddlewares];
 
     if (open && hasReduxTool) {
         options.compose.push(devtool(true));

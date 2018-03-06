@@ -17,10 +17,13 @@ import { hydrate } from 'react-dom';
 import { Provider } = require('react-redux');
 import * as reducers from './reducers';
 import Store from 'redux-store-init';
+
 import thunk from 'redux-thunk';
 import logger from 'redux-diff-logger';
 
 const store = Store({ reducers, devtool: true, applyMiddlewares: [thunk, logger] });
+// or
+// Store({ reducers, devtool: true }, [thunk, logger]);
 
 hydrate(
     <Provider store={store}>
