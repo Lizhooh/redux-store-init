@@ -32,6 +32,8 @@ hydrate(
 ### options
 
 - devtool: Boolean
-- reducers: Function
+- reducers: Object
 - compose: Array
+
+
 

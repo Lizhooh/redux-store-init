@@ -32,6 +32,6 @@ export default (options) => {
         combineReducers({
             ...options.reducers,
         }),
-        compose(...middleware(options.devtool), ...compose),
+        compose(...middleware(options.devtool), ...options.compose),
     );
 }
