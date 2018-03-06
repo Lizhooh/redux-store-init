@@ -34,6 +34,7 @@ hydrate(
 - devtool: Boolean
 - reducers: Object
 - compose: Array
+- applyMiddlewares: Array
 
 
 
