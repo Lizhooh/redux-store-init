@@ -1,6 +1,6 @@
 {
   "name": "redux-store-init",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "redux-store-init is a function used to initialize store.",
   "main": "index.js",
   "repository": {

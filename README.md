@@ -6,7 +6,6 @@ redux-store-init is a function used to initialize store.
 ### install
 
 ```js
-npm install --save redux react-redux redux-thunk
 npm install --save redux-store-init
 ```
 
@@ -18,8 +17,10 @@ import { hydrate } from 'react-dom';
 import { Provider } = require('react-redux');
 import * as reducers from './reducers';
 import Store from 'redux-store-init';
+import thunk from 'redux-thunk';
+import logger from 'redux-diff-logger';
 
-const store = Store({ reducers, devtool: true });
+const store = Store({ reducers, devtool: true, applyMiddlewares: [thunk, logger] });
 
 hydrate(
     <Provider store={store}>
@@ -35,6 +36,4 @@ hydrate(
 - reducers: Object
 - compose: Array
 - applyMiddlewares: Array
-
-
 
