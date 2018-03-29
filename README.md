@@ -3,6 +3,11 @@
 ### redux-store-init
 redux-store-init is a function used to initialize store.
 
+
+<a href="https://www.npmjs.com/package/redux-store-init"><img src="https://img.shields.io/npm/v/redux-store-init.svg?style=flat-square"></a>
+<a href="https://www.npmjs.com/package/redux-store-init"><img src="https://img.shields.io/npm/dm/redux-store-init.svg?style=flat-square"></a>
+
+
 ### install
 
 ```js
