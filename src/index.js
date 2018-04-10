@@ -24,7 +24,7 @@ export default (options, applyMiddlewares = []) => {
 
     const _middleware = [...options.applyMiddlewares, ...applyMiddlewares];
 
-    if (open && hasReduxTool) {
+    if (options.devtool && hasReduxTool) {
         options.compose.push(devtool(true));
     }
 
