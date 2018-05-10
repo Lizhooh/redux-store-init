@@ -6,5 +6,5 @@ export interface IOptions {
     applyMiddlewares?: Array<any>,
 }
 
-export default function (options: IOptions, applyMiddlewares: Array<any>): any;
+export default function (options: IOptions, applyMiddlewares?: Array<any>): any;
 
