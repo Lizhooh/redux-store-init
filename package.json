@@ -1,6 +1,6 @@
 {
   "name": "redux-store-init",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "redux-store-init is a function used to initialize store.",
   "main": "index.js",
   "repository": {
@@ -15,6 +15,6 @@
     "redux-init"
   ],
   "dependencies": {
-    "is-env": "^1.0.1"
+    "is-env": "latest"
   }
 }
