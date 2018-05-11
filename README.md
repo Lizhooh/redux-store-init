@@ -19,7 +19,7 @@ npm install --save redux-store-init
 ```js
 import React from 'react';
 import { hydrate } from 'react-dom';
-import { Provider } = require('react-redux');
+import { Provider } from 'react-redux';
 import * as reducers from './reducers';
 import Store from 'redux-store-init';
 
