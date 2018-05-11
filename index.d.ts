@@ -1,10 +1,16 @@
+import * as Redux from 'redux';
 
-export interface IOptions {
-    devtool?: Boolean,
-    reducers: Object,
-    compose?: Array<any>,
-    applyMiddlewares?: Array<any>,
+export interface Reducers {
+    [rest: string]: Redux.Reducer<any>,
 }
 
-export default function (options: IOptions, applyMiddlewares?: Array<any>): any;
+export interface IOptions {
+    reducers?: Reducers,
+    devtool?: boolean,
+    compose?: any[],
+    applyMiddlewares?: any[],
+}
+
+export default function (options: IOptions, applyMiddlewares?: any[]): Redux.Store<any>;
+
 
