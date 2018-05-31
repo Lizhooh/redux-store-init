@@ -18,6 +18,7 @@ export default (options, applyMiddlewares = []) => {
         devtool: true,
         reducers: {},
         compose: [],
+        initState: {},
         applyMiddlewares: [],
         ...options,
     };
@@ -32,6 +33,7 @@ export default (options, applyMiddlewares = []) => {
         combineReducers({
             ...options.reducers,
         }),
+        options.initState,
         compose(applyMiddleware(..._middleware), ...options.compose),
     );
 }

@@ -8,6 +8,7 @@ export interface IOptions {
     reducers?: Reducers,
     devtool?: boolean,
     compose?: any[],
+    initState?: any,
     applyMiddlewares?: any[],
 }
 
