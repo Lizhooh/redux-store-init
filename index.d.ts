@@ -15,3 +15,4 @@ export interface IOptions {
 export default function (options: IOptions, applyMiddlewares?: any[]): Redux.Store<any>;
 
 
+export function createReducer(name: string, initState: object | any): object | any;
