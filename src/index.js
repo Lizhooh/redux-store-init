@@ -40,12 +40,14 @@ export default (options, applyMiddlewares = []) => {
 
 export function createReducer(name, initState) {
     return (state = initState, action) => {
-        if (action.newState && typeof action.newState !== 'function') {
+        const { type, newState } = action;
+
+        if (newState && typeof newState !== 'function') {
             console.warn(`[${name}] action.newState is not a function`);
             return state;
         }
-        if (action.type === name) {
-            return action.newState(state, initState) || state;
+        if (typeof type === 'string' && (type === name || type.split('@')[0] === name)) {
+            return newState(state, initState) || state;
         }
         return state;
     };
